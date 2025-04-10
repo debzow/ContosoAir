@@ -9,14 +9,13 @@ trigger:
 resources:
  pipelines:
   - pipeline: buildContosoAir # identifier for the resource used in pipeline resource variables
-    source: Student1-50163990.ContosoAir # name of the pipeline that produces the artifact
+    source: debzow.ContosoAir # name of the pipeline that produces the artifact
     trigger:
      branches:
       include:
        - master
 
 pool:
-  name: default
   vmImage: ubuntu-latest
 
 steps:
