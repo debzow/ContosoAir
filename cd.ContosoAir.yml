@@ -4,7 +4,16 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- none
+
+resources:
+ pipelines:
+  - pipeline: buildContosoAir # identifier for the resource used in pipeline resource variables
+    source: debzow.ContosoAir # name of the pipeline that produces the artifact
+    trigger:
+     branches:
+      include:
+       - master
 
 pool:
     name: default
